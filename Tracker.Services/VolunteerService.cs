@@ -113,5 +113,36 @@ namespace Tracker.Services
                 return allVolunteers.ToArray();
             }
         }
+
+        public bool UpdateVolunteerInfo(VolunteerEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var updates =
+                    ctx
+                    .Volunteers
+                    .Single(e => e.VolunteerId == model.VolunteerId);
+                updates.FirstName = model.FirstName;
+                updates.LastName = model.LastName;
+                updates.EmailAddress = model.EmailAddress;
+                updates.DaysAbleToVolunteer = model.DaysAbleToVolunteer;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool RemoveVolunteer(int id)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Volunteers
+                    .Single(e => e.VolunteerId == id);
+
+                ctx.Volunteers.Remove(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
