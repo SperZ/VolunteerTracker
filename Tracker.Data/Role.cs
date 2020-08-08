@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,10 @@ namespace Tracker.Data
         public string RoleName { get; set; }
         [MaxLength(500)]
         public string Description { get; set; }
-        
+
+        public int VolunteerId { get; set; }
+
+        [ForeignKey(nameof(VolunteerId))]
         public virtual ICollection<Volunteer> Volunteers { get; set; }
         public virtual ICollection<OrganizationProgram> OrganizaitonPrograms { get; set; }
     }

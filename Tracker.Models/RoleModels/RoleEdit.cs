@@ -8,7 +8,8 @@ namespace Tracker.Models
 {
     public class RoleEdit
     {
-        public string Name { get; set; }
+        public int RoleId { get; set; }//this needs to go here or we cant access it in the role edit method of our role services
+        public string RoleName { get; set; }
         public string Description { get; set; }
     }
 }

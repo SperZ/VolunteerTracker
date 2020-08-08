@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tracker.Data;
 
 namespace Tracker.Models
 {
-    public class OrganizationDetail
+    public class OrganizationCreate
     {
-        public int OrganizationId { get; set; }
+        [Required]
         public string OrganizationName { get; set; }
+        [MaxLength(500)]
         public string OrganizatinonDescription { get; set; }
         public string Address { get; set; }
+        [Required]
         public string WebUrl { get; set; }
-        public virtual ICollection<OrganizationProgram> OrganizationPrograms { get; set; }
-        public virtual ICollection<Volunteer> Volunteers { get; set; }
     }
-
 }

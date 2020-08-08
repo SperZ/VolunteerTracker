@@ -54,11 +54,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrganizationProgramService.cs" />
+    <Compile Include="OrganizationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleService.cs" />
+    <Compile Include="VolunteerService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tracker.Data\Tracker.Data.csproj">
+      <Project>{93b47188-1830-4232-9fa3-0f8df72bd11b}</Project>
+      <Name>Tracker.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tracker.Models\Tracker.Models.csproj">
+      <Project>{94b42b76-22af-4514-b55a-beccbe0a2909}</Project>
+      <Name>Tracker.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

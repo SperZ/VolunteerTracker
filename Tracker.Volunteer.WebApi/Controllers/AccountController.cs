@@ -13,6 +13,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
+using Tracker.Data;
 using Tracker.Volunteer.WebApi.Models;
 using Tracker.Volunteer.WebApi.Providers;
 using Tracker.Volunteer.WebApi.Results;

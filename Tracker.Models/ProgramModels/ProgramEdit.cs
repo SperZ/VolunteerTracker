@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Tracker.Models
 {
-    public class ProgramCreate
+    public class ProgramEdit
     {
+        public int ProgramId { get; set; }
         public string ProgramName { get; set; }
-       
+
         public string ProgramDescription { get; set; }
 
         public string Address { get; set; }

@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.Data.Entity;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -29,5 +30,10 @@ namespace Tracker.Data
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Organization> Organizations { get; set; }
+        public DbSet<OrganizationProgram> OrganizationPrograms { get; set; }
+        public DbSet<Volunteer> Volunteers { get; set; }
+        public DbSet<Role>  Roles { get; set; }
     }
 }

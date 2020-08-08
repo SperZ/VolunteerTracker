@@ -9,7 +9,7 @@ namespace Tracker.Models
 {
     public class OrganizationEdit
     {
-     
+        public int OrganizationId { get; set; }
         public string OrganizationName { get; set; }
         public string OrganizatinonDescription { get; set; }
         public string Address { get; set; }

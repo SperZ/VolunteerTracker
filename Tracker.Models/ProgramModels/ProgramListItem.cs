@@ -10,5 +10,6 @@ namespace Tracker.Models
     {
         public int ProgramId { get; set; }
         public string ProgramName { get; set; }
+        public string Address { get; set; }
     }
 }

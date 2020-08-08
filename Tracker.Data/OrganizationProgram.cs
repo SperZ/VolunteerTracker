@@ -11,7 +11,6 @@ namespace Tracker.Data
 {
     public class OrganizationProgram
     {
-
         public OrganizationProgram()
         {
             this.Volunteers = new HashSet<Volunteer>();
@@ -27,5 +26,9 @@ namespace Tracker.Data
         public string Address { get; set; }
         public virtual ICollection<Volunteer> Volunteers { get; set; }
         public virtual ICollection<Role> Roles { get; set; }
+        public int OrganizationId { get; set; }
+
+        [ForeignKey(nameof(OrganizationId))]
+        public virtual Organization Organization { get; set; }
     }
 }

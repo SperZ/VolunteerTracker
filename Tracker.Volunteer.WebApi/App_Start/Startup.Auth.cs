@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using Tracker.Volunteer.WebApi.Providers;
 using Tracker.Volunteer.WebApi.Models;
+using Tracker.Data;
 
 namespace Tracker.Volunteer.WebApi
 {

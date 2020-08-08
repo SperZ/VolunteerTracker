@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
+using Tracker.Data;
 using Tracker.Volunteer.WebApi.Models;
 
 namespace Tracker.Volunteer.WebApi.Providers
